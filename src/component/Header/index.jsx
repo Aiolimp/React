@@ -6,7 +6,7 @@ export default class Header extends Component {
     const { keyCode, target } = event;
     if (keyCode !== 13) return;
     if (target.value.trim() === '') {
-      alert('输入不能为空')
+      alert('输入不能为空11')
       return
     }
     const todoObj = {id:nanoid(),name:target.value,done:false}
