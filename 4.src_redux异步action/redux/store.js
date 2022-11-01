@@ -1,5 +1,7 @@
-import { legacy_createStore } from "redux";
+import { legacy_createStore,applyMiddleware } from "redux";
 
 import countReduser from './count_reduser';
 
-export default legacy_createStore(countReduser);
+import thunk from 'redux-thunk'
+
+export default legacy_createStore(countReduser,applyMiddleware(thunk));
