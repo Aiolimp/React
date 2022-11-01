@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-![redux原理图](C:\Users\Administrator\Desktop\react全家桶资料\02_原理图\redux原理图.png)
 
-![react-redux模型图](C:\Users\Administrator\Desktop\react全家桶资料\02_原理图\react-redux模型图.png)
-=======
+![redux原理图](https://img-blog.csdnimg.cn/9b5a366558df4949965ef52c3493ee74.png)
 
->>>>>>> fd166756cde08da27404b6ec9f39fd5292fc5b94
+
+![react-redux原理图](https://img-blog.csdnimg.cn/e7d0c13c5dce4385b4af0d70357c5059.png)
