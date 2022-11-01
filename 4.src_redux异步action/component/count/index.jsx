@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import store from '../../redux/store'
-import { createIncrementAction, createDecrementAction,createIncrementAsyncAction } from '../../redux/aciton'
+import { createIncrementAction, createDecrementAction } from '../../redux/aciton'
 
 export default class Count extends Component {
   increment = () => {
@@ -20,7 +20,10 @@ export default class Count extends Component {
   }
   incrementSycn = () => {
     const { value } = this.selectNumber;
-    store.dispatch(createIncrementAsyncAction(value * 1,2000))
+    setTimeout(() => {
+      store.dispatch(createIncrementAction(value * 1))
+    }, 2200)
+
   }
   componentDidMount() {
     store.subscribe(() => {
