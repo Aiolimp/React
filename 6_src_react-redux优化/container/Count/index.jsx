@@ -1,6 +1,8 @@
+import { createIncrementAction, createDecrementAction, createIncrementAsyncAction } from '../../redux/aciton'
+import { connect } from 'react-redux'
 import React, { Component } from 'react'
 
-export default class Count extends Component {
+class Count extends Component {
   increment = () => {
     const { value } = this.selectNumber;
     this.props.jia(value*1)
@@ -36,3 +38,22 @@ export default class Count extends Component {
     )
   }
 }
+
+
+//使用connect创建并暴露一个count容器组件
+export default connect(
+    state => ({ count: state }),
+    //mapDispatchToProps一般写法
+    /* dispatch => (
+        {
+            jia: number => dispatch(createIncrementAction(number)),
+            jian: number => dispatch(createDecrementAction(number)),
+            async: (number, time) => dispatch(createIncrementAsyncAction(number, time)),
+        }
+    ) */
+    //mapDispatchToProps简写
+    {
+        jia: createIncrementAction,
+        jian: createDecrementAction,
+        async: createIncrementAsyncAction,
+    })(Count);
