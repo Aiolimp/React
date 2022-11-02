@@ -1,11 +1,14 @@
 import React from "react";
-import Demo from "./components/context"
+import Count from "./container/Count"
+import Person from "./container/Person"
+
 
 export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Demo/>
+        <Count/>
+        <Person/>
       </div>
     )
   }
